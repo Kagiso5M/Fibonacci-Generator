@@ -8,8 +8,15 @@ def fib():
     while True:
         yield x
         x,y = y, x+y
+
+#User sets the fibonacci liit
+limit = input("Please enter the limit:\n")
+print(f'The limit entered is:{limit}')
+limit = int(limit)
+
 #Printing results
+print(f'your pattern is as follows: ')
 for i in fib():
-    if i > 5000:   #5000 is the number that should not be crossed_over
+    if i > limit:   
          break;
     print(i)
